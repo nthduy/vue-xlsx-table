@@ -65,7 +65,7 @@ export default {
         const workbook = await this.fileConvertToWorkbook(this.rawFile);
         const xlsxArr = XLSX.utils.sheet_to_json(
           workbook.Sheets[workbook.SheetNames[0]],
-          { defval: null }
+          { defval: null, raw: false }
         );
         this.workbook = workbook;
         this.initTable(this.xlsxArrToTableArr(xlsxArr));
