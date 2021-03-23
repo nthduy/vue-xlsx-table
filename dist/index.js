@@ -3544,7 +3544,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.rawFile = e.target.files[0];
 
         var workbook = await this.fileConvertToWorkbook(this.rawFile);
-        var xlsxArr = __WEBPACK_IMPORTED_MODULE_0_xlsx___default.a.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { defval: null });
+        var xlsxArr = __WEBPACK_IMPORTED_MODULE_0_xlsx___default.a.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { defval: null, raw: false });
         this.workbook = workbook;
         this.initTable(this.xlsxArrToTableArr(xlsxArr));
       } catch (err) {
